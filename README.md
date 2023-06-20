@@ -14,3 +14,11 @@ After search process I found out that recurrent neural network is suitable to ge
 
  I used two function from Keras documentation: sample and on_epoch_end. I import also ModelCheckpoint to remember loss decreases from loss. Other callback function reduce learning rate.
  
+## Model training
+I created model and fitted. Qauntity of epochs equal 5 and batch_size equal 128. Model created train data and print generated text.
+
+### Final function
+I created final function to text generation.
+
+
+
