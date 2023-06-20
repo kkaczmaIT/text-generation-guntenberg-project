@@ -12,4 +12,5 @@ After search process I found out that recurrent neural network is suitable to ge
 - Dense output for each character
 - Activation transforms values to propability
 
+ I used two function from Keras documentation: sample and on_epoch_end. I import also ModelCheckpoint to remember loss decreases from loss. Other callback function reduce learning rate.
  
