@@ -34,16 +34,14 @@ After search process I found out that recurrent neural network is suitable to ge
  I used two function from Keras documentation: sample and on_epoch_end. I import also ModelCheckpoint to remember loss decreases from loss. Other callback function reduce learning rate.
  
 ## Model training
-I created model and fitted. Qauntity of epochs equal 5 and batch_size equal 128. Model created train data and print generated text.
+I created model and fitted. Qauntity of epochs equal 5 and batch_size equal 128. Model created train data and print generated text. In solution I use another file to store weight `weights.HDF5`.
 ```
- model = Sequential()
- model.add(LSTM(128, input_shape=(maxlen, len(chars))))
- model.add(Dense(len(chars), activation='softmax'))
+  model = Sequential()
+  model.add(LSTM(128, input_shape=(maxlen, len(chars))))
+  model.add(Dense(len(chars), activation='softmax'))
 
- optimizer = RMSprop(learning_rate=0.01)
- model.compile(loss='categorical_crossentropy', optimizer=optimizer, metrics = ["accuracy"])
-
- model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+  optimizer = RMSprop(learning_rate=0.01)
+  model.compile(loss='categorical_crossentropy', optimizer=optimizer, metrics = ["accuracy"])
 ```
 
 
@@ -51,6 +49,10 @@ I created model and fitted. Qauntity of epochs equal 5 and batch_size equal 128.
 I created final function to text generation.
 
 ## Analyze results
+Results are showed on plots. 
 
+### Accuracy plots
+![Accuracy plot]('plot-accuracy.png')
 
-
+### Loss plots
+![Loss plot]('plot-loss.png')
