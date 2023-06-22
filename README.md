@@ -52,9 +52,9 @@ I created final function to text generation.
 Results are showed on plots. 
 
 ### Accuracy plots
-![Accuracy plot]('plot-accuracy.png')
+![Accuracy plot](plot-accuracy.png)
 
 ### Loss plots
-![Loss plot]('plot-loss.png')
+![Loss plot](plot-loss.png)
 
 Metrics after 13 epoch increase slower and additional epochs will not increase rate in much way. Model achieve not very high accuracy and it is uneffort but rehearsal with additional layers like dropout not helped. As a result generation text can contain mistakes. 
